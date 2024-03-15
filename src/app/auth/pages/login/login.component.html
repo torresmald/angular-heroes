@@ -1,0 +1,18 @@
+<div class="flex flex-column">
+    <span class="text-lg py-3">Login</span>
+    <mat-form-field>
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput placeholder="Usuario">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password">
+    </mat-form-field>
+    <button mat-button mat-flat-button color="primary">
+        <mat-icon>key</mat-icon>
+        Login
+    </button>
+    <div class="flex mt-2 justify-content-end">
+        <a routerLink="/auth/register">¿No tienes cuenta? Registrate</a>
+    </div>
+</div>
