@@ -1,1 +1,21 @@
-<p>search-page works!</p>
+
+<mat-form-field class="example-full-width w-full">
+    <mat-label>Number</mat-label>
+    <input type="text"
+           placeholder="Hero"
+           aria-label="Hero"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto"
+           (input)="onSubmit()"
+           >
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event)">
+
+        <mat-option [value]="hero" *ngFor="let hero of heroes">{{hero.superhero}}</mat-option>
+        <mat-option value="" *ngIf="heroes.length === 0 && myControl.value && myControl.value.length > 0">No hay nada con {{myControl.value}}</mat-option>
+      
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+  <p>{{selectedHero?.superhero}}</p>

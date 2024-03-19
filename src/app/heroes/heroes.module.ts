@@ -8,7 +8,9 @@ import { ListComponent } from './pages/list/list.component';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
-
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { HeroImagePipe } from './pipes/image-hero.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,10 @@ import { MaterialModule } from '../material/material.module';
     LayoutComponent,
     ListComponent,
     NewPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    HeroCardComponent,
+    HeroImagePipe,
   ],
-  imports: [
-    CommonModule,
-    HeroesRoutingModule,
-    MaterialModule
-  ]
+  imports: [CommonModule, HeroesRoutingModule, MaterialModule, ReactiveFormsModule],
 })
-export class HeroesModule { }
+export class HeroesModule {}
